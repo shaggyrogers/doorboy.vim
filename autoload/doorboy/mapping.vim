@@ -108,7 +108,7 @@ function! s:get_separator_r_exp()
 endfunction
 
 "
-" Returns s:EXPAND_ABBR if char is a keyword character, '' otherwise.
+" Returns s:EXPAND_ABBR if char is not a keyword character, '' otherwise.
 "
 function! s:get_expand_abbr(char)
   if match(a:char, '\k') == -1
