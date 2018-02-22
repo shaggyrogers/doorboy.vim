@@ -19,7 +19,7 @@ let s:EXPAND_ABBR = "\<C-]>"
 function! doorboy#mapping#put_quotation(quotation)
   let l:expand_abbr = s:get_expand_abbr(quotation)
   if doorboy#util#get_next_char() ==# a:quotation
-    return s:expand_abbr() . s:SKIP
+    return l:expand_abbr . s:SKIP
   endif
   if doorboy#util#in_regular_expression()
     return l:expand_abbr . a:quotation
